@@ -7,6 +7,7 @@ import {
 } from 'reactstrap';
 import TodoList from './TodoList/TodoList';
 import TaskService from '../../services/TaskService';
+import ConfigStorage from '../../services/storage/config.store';
 
 
 class Dashboard extends Component {
@@ -29,12 +30,18 @@ class Dashboard extends Component {
       })
     })
   }
-  componentDidMount(){
-    TaskService.index().then((res) =>{
-      this.setState({
-        items : res.data.data
-      }) 
-    })
+  async componentDidMount(){
+    const token = await ConfigStorage.getToken();
+    if (token){
+      TaskService.index().then((res) =>{
+        this.setState({
+          items : res.data.data
+        })
+      })
+    }else{
+      this.props.history.push('/login')
+    }
+  
   }
 
   handleInput = e => {
