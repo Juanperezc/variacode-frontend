@@ -1,8 +1,6 @@
  
 # variacode-backend
  
-En un GitHub o bitbucket, invitas como visor/lector a alberto@nexoabogados.net y miguel@variacode.com, el objetivo es mostrar tus habilidades de arquitectura de software y buenas prácticas de desarrollo.
-
 Stack: postgres, node (rest), react.
 
 Se evaluará los aspectos en su amplitud, no su profundidad, es decir, cosas como el README, facilidad de instalación, estructura, pruebas automáticas, etc. Más que funcionalidades.
