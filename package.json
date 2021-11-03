@@ -45,7 +45,7 @@
     "redux": "^4.0.4",
     "simple-line-icons": "^2.4.1",
     "sweetalert2": "^9.5.3",
-    "validator": "^12.1.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "react-scripts": "^3.3.0"
